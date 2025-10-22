@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Saya</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    main {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    article {
+      flex: 1 1 65%;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    aside {
+      flex: 1 1 25%;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      height: fit-content;
+    }
+
+    img.profile {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    h2 {
+      margin-bottom: 5px;
+    }
+
+    section {
+      margin-top: 15px;
+    }
+
+    video,
+    audio {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+
+    ul.attachments {
+      list-style-type: none;
+      padding-left: 10px;
+    }
+
+    ul.attachments li {
+      margin: 5px 0;
+    }
+
+    a {
+      color: #0073e6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Andi rezky brilian mubarak</h1>
+    <p>Jl. Shibi Gang Haji Kari No. 59A, Srengseng Sawah, Jagakarsa</p>
+    <p>
+      Email:
+      <a href="andi rezky brilian mubarak@gmail.com">andi rezky brilian mubarak@gmail.com</a> |
+      Telepon:
+      <a href="tel:+6282381000972">0823-8100-0972</a>
+    </p>
+  </header>
+
+  <main>
+    <article>
+      <h2>Profil</h2>
+      <img src="andi.jpg" alt="Foto Profil" class="profile">
+
+      <section>
+        <h2>Tentang Saya</h2>
+        <p>
+          saya adalah lulusan pondok pesantren yang masuk ke dalam prodi teknik informatika dan di kala saya gelisah saya pasti membaca al quran
+        </p>
+      </section>
+
+      <section>
+        <h2>Konten Multimedia</h2>
+        <video controls>
+          <source src="andi.mp4" type="video/mp4">
+          Browser Anda tidak mendukung pemutar video.
+        </video>
+        <audio controls>
+          <source src="andi.mp3" type="audio/mpeg">
+          Browser Anda tidak mendukung pemutar audio.
+        </audio>
+      </section>
+
+      <section>
+        <h2>Galeri</h2>
+        <img src="andi.jpg" alt="Foto 1" width="100">
+        <img src="andi.jpg" alt="Foto 2" width="100">
+        <img src="andi.jpg" alt="Foto 3" width="100">
+      </section>
+
+      <section>
+        <h2>Media Sosial</h2>
+        <ul class="attachments">
+          <li>
+            <a href="https://www.instagram.com/ekiy.y?igsh=a2NybTlwYzRjdnF6" target="_blank" rel="noopener noreferrer">
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/6282381000972" target="_blank" rel="noopener noreferrer">
+              WhatsApp
+            </a>
+          </li>
+        </ul>
+      </section>
+    </article>
+
+    <aside>
+      <h2>Informasi Tambahan</h2>
+      <p>
+        Saya adalah seseorang yang bersemangat dalam belajar teknologi dan desain web.
+        Saya suka menulis, menggambar, dan mengikuti perkembangan dunia digital.
+      </p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Andi rezky. Semua Hak Dilindungi.</p>
+  </footer>
+
+</body>
+</html>
