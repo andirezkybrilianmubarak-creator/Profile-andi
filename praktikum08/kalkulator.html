@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Penjumlahan Dua Bilangan</title>
+</head>
+<body>
+  <h2>Penjumlahan Dua Bilangan</h2>
+  <div class="baris">
+    <input type="number" id="bil1" value="4" onChange="hitung()"> +
+    <input type="number" id="bil2" value="5" onChange="hitung()"> =
+    <input type="number" id="hasil" value="9" readonly>
+  </div>
+
+  <script>
+    function hitung() {
+      const a = parseFloat(document.getElementById("bil1").value) || 0;
+      const b = parseFloat(document.getElementById("bil2").value) || 0;
+      document.getElementById("hasil").value = a + b;
+    }
+    window.onload = hitung;
+  </script>
+</body>
+</html>
