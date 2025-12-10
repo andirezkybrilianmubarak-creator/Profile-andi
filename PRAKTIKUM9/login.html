@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Authentication</title>
+  <script src="otentikasi.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-box {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      width: 300px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Form Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="cekLogin()">Login</button>
+  </div>
+</body>
+</html>

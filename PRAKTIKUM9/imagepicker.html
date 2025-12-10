@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Picker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    select {
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    img {
+      margin-top: 20px;
+      max-width: 300px;
+      height: auto;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Pilih Gambar</h2>
+  <select id="gambarSelect" onchange="tampilkanGambar()">
+    <option value="">-- Pilih --</option>
+    <option value="andi1.jpg">sertikat1</option>
+    <option value="andi2.jpg">sertifikat2</option>
+    <option value="andi3.jpg">sertifikat3</option>
+    <option value="andi4.jpg">sertifikat4</option>
+
+  </select>
+
+  <div>
+    <img id="gambarTampil" src="andi1.jpg.jpg" alt="Gambar akan muncul di sini">
+  </div> 
+
+  <script>
+    function tampilkanGambar() {
+      const select = document.getElementById("gambarSelect");
+      const gambar = document.getElementById("gambarTampil");
+      const file = select.value;
+
+      if (file) {
+        gambar.src = "andi2.jpg" + file;
+        alert("andi3.jpg " + file);
+      } else {
+        gambar.src = "andi4.jpg";
+      }
+    }
+  </script>
+
+</body>
+</html>

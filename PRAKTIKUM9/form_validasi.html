@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validasi Tiket</title>
+</head>
+<body>
+  <form>
+    <label for="name">Nama:</label>
+    <input type="text" id="name" placeholder="Masukkan nama anda">
+    <p id="errorName"></p>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Masukkan email anda">
+    <p id="errorEmail"></p>
+
+    <label for="jam">Jam:</label>
+    <input type="time" id="jam">
+    <p id="errorJam"></p>
+
+    <label for="tujuan">Tujuan:</label>
+    <input type="text" id="tujuan" placeholder="Masukkan tujuan anda">
+    <p id="errorTujuan"></p>
+
+    <label for="tiket">Jumlah Tiket:</label>
+    <input type="number" id="tiket" placeholder="Masukkan jumlah tiket">
+    <p id="errorTiket"></p>
+
+    <input type="button" value="Submit" onclick="formValidation()">
+  </form>
+
+  <div>
+    <h1 id="hasil"></h1>
+    <p id="hasilname"></p>
+    <p id="hasilemail"></p>
+    <p id="hasiljam"></p>
+    <p id="hasiltujuan"></p>
+    <p id="hasiltiket"></p>
+  </div>
+
+  <script>
+    function formValidation() {
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let jam = document.getElementById("jam").value;
+      let tujuan = document.getElementById("tujuan").value;
+      let tiket = document.getElementById("tiket").value;
+
+      document.getElementById("hasil").innerHTML = "Validasi data";
+
+      // Reset error messages
+      document.getElementById("errorName").innerHTML = "";
+      document.getElementById("errorEmail").innerHTML = "";
+      document.getElementById("errorJam").innerHTML = "";
+      document.getElementById("errorTujuan").innerHTML = "";
+      document.getElementById("errorTiket").innerHTML = "";
+
+      if (
+        name.toLowerCase() === "hanna" &&
+        email === "kyuu@gmail.com" &&
+        jam === "06:00" &&
+        tujuan.toLowerCase() === "kalimantan" &&
+        tiket === "3"
+      ) {
+        document.getElementById("hasilname").innerHTML = "Nama Pelanggan: " + name;
+        document.getElementById("hasilemail").innerHTML = "Email: " + email;
+        document.getElementById("hasiljam").innerHTML = "Jam Keberangkatan: " + jam;
+        document.getElementById("hasiltujuan").innerHTML = "Tujuan: " + tujuan;
+        document.getElementById("hasiltiket").innerHTML = "Tiket: " + tiket;
+      } else {
+        if (name.toLowerCase() !== "hanna") {
+          document.getElementById("errorName").innerHTML = "DATA TIDAK DITEMUKAN";
+          document.getElementById("errorName").style.color = "red";
+        }
+        if (email !== "Andi rezky.com") {
+          document.getElementById("errorEmail").innerHTML = "DATA TIDAK DITEMUKAN";
+          document.getElementById("errorEmail").style.color = "red";
+        }
+        if (jam !== "06:00") {
+          document.getElementById("errorJam").innerHTML = "DATA TIDAK DITEMUKAN";
+          document.getElementById("errorJam").style.color = "red";
+        }
+        if (tujuan.toLowerCase() !== "kalimantan") {
+          document.getElementById("errorTujuan").innerHTML = "DATA TIDAK DITEMUKAN";
+          document.getElementById("errorTujuan").style.color = "red";
+        }
+        if (tiket !== "3") {
+          document.getElementById("errorTiket").innerHTML = "DATA TIDAK DITEMUKAN";
+          document.getElementById("errorTiket").style.color = "red";
+        }
+      }
+      function reload() {
+        window.location.reload();   n  
+    }
+  </script>
+</body>
+</html>

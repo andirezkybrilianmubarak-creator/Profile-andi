@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Rupiah</title>
+</head>
+<body>
+    <form style="background-color: blue; padding: 20px; color: white;">
+        <fieldset>
+            <legend>Kurs Rupiah Ke Mata Uang Asing</legend>
+
+            <table border="1" cellpadding="8" style="background: white; color:black;">
+                <thead>
+                    <tr>
+                        <th>Masukan Nilai</th>
+                        <th>Valas</th>
+                        <th>Nilai Rupiah</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="number" id="uang" placeholder="Masukkan angka">
+                        </td>
+
+                        <td>
+                            <select id="pilih">
+                                <option value="">Pilih</option>
+                                <option value="usd">Dolar US</option>
+                                <option value="sd">Singapore Dolar</option>
+                                <option value="rm">Ringgit Malaysia</option>
+                                <option value="yen">Japanese Yen</option>
+                                <option value="eu">Euro</option>
+                                <option value="riyal">Riyal Saudi Arabia</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <input type="number" id="konversi" readonly>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+    </form>
+
+    <script>
+        let pilih = document.getElementById("pilih");
+
+        pilih.onchange = function () {
+            let uang = document.getElementById("uang").value;
+
+            if (pilih.value === "usd") {
+                konversi.value = uang * 9915;
+            } else if (pilih.value === "sd") {
+                konversi.value = uang * 13472;
+            } else if (pilih.value === "rm") {
+                konversi.value = uang * 874;
+            } else if (pilih.value === "yen") {
+                konversi.value = uang * 120;
+            } else if (pilih.value === "eu") {
+                konversi.value = uang * 15888;
+            } else if (pilih.value === "riyal") {
+                konversi.value = uang * 3592;
+            } else {
+                konversi.value = "";
+                alert("Anda belum memilih jenis mata uang.");
+            }
+        }
+    </script>
+</body>
+</html>
